@@ -77,27 +77,19 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name"><br><br>
 
-            <!-- Date input -->
             <label for="meetingDate">Meeting Date:</label>
             <input type="date" id="meetingDate" name="meetingDate"><br><br>
 
-            <!-- Radio input -->
-            <p>Did the meeting achieve its objectives?</p>
+            <p>Do you feel the meeting achieved its objectives?</p>
             <label for="yes">Yes</label>
             <input type="radio" id="yes" name="objectivesAchieved" value="yes">
             <label for="no">No</label>
-            <input type="radio" id="no" name="objectivesAchieved" value="no">
+            <input type="radio" id="no" name="objectivesAchieved" value="no"><br><br>
 
-            <!-- Checkbox input -->
-            <label for="attendNext">Will you attend the next meeting?</label>
-            <input type="checkbox" id="attendNext" name="attendNext" value="yes">
+            <label for="attendNext">When are you free to attend the next meeting?</label>
+            <input type="checkbox" id="attendNext" name="attendNext" value="yes"><br><br>
 
-            <!-- Textarea -->
-            <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
-
-            <!-- Datalist -->
-            <label for="topicList">Suggested Topics:</label>
+            <label for="topicList">Suggested Topics to talk about:</label>
             <input list="topics" id="topicList" name="topicList">
             <datalist id="topics">
                 <option value="Productivity Tools">
@@ -105,17 +97,6 @@
                 <option value="Health and Wellbeing">
                 <option value="Project Updates">
             </datalist>
-
-            <!-- Select and Option -->
-            <label for="topicImportance">Importance of the Topic:</label>
-            <select id="topicImportance" name="topicImportance">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-
-            <!-- Button -->
-            <button type="submit">Submit Feedback</button>
         </fieldset>
     </form>
 </footer>
