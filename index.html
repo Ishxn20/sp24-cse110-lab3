@@ -85,9 +85,15 @@
             <input type="radio" id="yes" name="objectivesAchieved" value="yes">
             <label for="no">No</label>
             <input type="radio" id="no" name="objectivesAchieved" value="no"><br><br>
-
-            <label for="attendNext">When are you free to attend the next meeting?</label>
-            <input type="checkbox" id="attendNext" name="attendNext" value="yes"><br><br>
+          
+          
+            <p>When are you available next?</p>
+            <select id="day" name="day">
+              <option value="Monday">Monday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+            </select><br><br> 
 
             <label for="topicList">Suggested Topics to talk about:</label>
             <input list="topics" id="topicList" name="topicList">
@@ -97,6 +103,11 @@
                 <option value="Health and Wellbeing">
                 <option value="Project Updates">
             </datalist>
+
+            <h4>Additional Comments</h4>
+            <textarea id="extra_space" rows="3" cols="50"> Anything else you would like to mention?</textarea> <br><br>
+            <button type="button">Submit</button>
+
         </fieldset>
     </form>
 </footer>
