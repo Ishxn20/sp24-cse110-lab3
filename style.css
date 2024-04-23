@@ -1,157 +1,160 @@
-/* CSS Reset (Universal Selector) */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* mystyle.css */
+/* General styling */
+body {
+  font-family: 'Open Sans', sans-serif; /* Example of using a Google font */
+  color: #333; /* Dark grey text color */
+  line-height: 1.6;
 }
 
 /* CSS Variables */
 :root {
-    --main-bg-color: #f2f2f2;
-    --accent-color: #0044cc;
-    --font-stack: 'Arial', sans-serif;
+  --main-bg-color: #f8f8f8; /* Light grey background */
+  --accent-color: #0066cc; /* Blue accent color */
 }
 
-/* Class Selector for section titles */
-.section-title {
-    color: var(--accent-color);
-    font-family: var(--font-stack);
-}
-
-/* ID Selector for the header */
-#main-header {
-    background-color: var(--main-bg-color);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Element Selector for paragraphs */
-p {
-    font-family: var(--font-stack);
-    line-height: 1.6;
-}
-
-/* Attribute Selector for links that open in a new tab */
-a[target="_blank"] {
-    color: var(--accent-color);
-}
-
-/* Pseudo-class Selector for hover on links */
-a:hover {
-    text-decoration: underline;
-}
-
-/* Selector List for h1, h2, h3 */
-h1, h2, h3 {
-    margin-bottom: .5rem;
-    color: #333;
-}
-
-/* Descendant Combinator */
-header h1 {
-    font-size: 2em;
-}
-
-/* Child Combinator */
-header > h2 {
-    font-size: 1.5em;
-}
-
-/* General Sibling Combinator */
-h1 ~ p {
-    font-style: italic;
-}
-
-/* Adjacent Sibling Combinator */
-h2 + p {
-    font-weight: bold;
-}
-
-/* New Selector :has() */
-p:has(strong) {
-    background-color: yellow;
-}
-
-/* Nested Selector */
-footer {
-    background-color: #ddd;
-    padding: 20px;
-}
-
-footer input {
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-}
-
-/* Flexbox Layout */
-#main-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Grid Layout */
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Box Model - Longhand */
-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-/* Box Model - Shorthand */
-section {
-    margin: 20px 10px;
-    padding: 10px 5px;
-}
-
-/* Font Style from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+/* Using a CSS variable with a fallback */
 body {
-    font-family: 'Roboto', sans-serif;
+  background-color: var(--main-bg-color, white);
 }
 
-/* Text Properties */
-p {
-    color: #555;
-    text-decoration: none;
-    text-align: justify;
+/* CSS Selectors */
+/* Class selector */
+.header-highlight {
+  color: var(--accent-color);
+}
+
+/* ID selector */
+#meetingDate {
+  border: 1px solid #ddd; /* Light grey border */
+}
+
+/* Universal selector */
+* {
+  box-sizing: border-box; /* Helps to manage box sizes */
+}
+
+/* Element selector */
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+/* Attribute selector */
+input[type="text"] {
+  padding: 8px;
+}
+
+/* Pseudo-class selector */
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Selector List */
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+/* Combinators */
+/* Descendant combinator */
+header h1 {
+  font-size: 2em;
+}
+
+/* Child combinator */
+section > p {
+  font-weight: bold;
+}
+
+/* General sibling combinator */
+h3 ~ div {
+  border-top: 1px solid #eee;
+}
+
+/* Adjacent sibling combinator */
+h3 + p {
+  color: #555;
+}
+
+/* Combining two selectors */
+p.header-highlight {
+  text-transform: uppercase;
+}
+
+/* New :has() pseudo-class */
+section:has(> ul) {
+  background-color: #eee; /* Highlight sections with unordered lists */
+}
+
+/* Nested Selectors */
+/* Nested selectors are used within the preprocessor context and are not included as native CSS is not capable of nesting */
+
+/* Layouts with Flexbox */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsiveness with Media Query */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+/* Box Model */
+/* Longhand */
+header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Shorthand */
+section {
+  margin: 20px 10px;
+  padding: 10px;
+}
+
+/* Border examples */
+header {
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-width: 3px 0;
+  border-radius: 5px;
+}
+
+/* Text styling */
+h1 {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Display property examples */
+.main {
+  display: block;
 }
 
 /* Sizing */
-img {
-    max-width: 100%;
-    height: auto;
+footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Positioning */
-#sticky-footer {
-    position: sticky;
-    bottom: 0;
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* Pseudo-classes */
-button:hover {
-    background-color: var(--accent-color);
-    color: #fff;
+input:focus {
+  border-color: var(--accent-color);
 }
 
-
+button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
