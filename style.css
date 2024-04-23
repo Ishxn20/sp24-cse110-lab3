@@ -1,15 +1,15 @@
 /* mystyle.css */
 /* General styling */
 body {
-  font-family: 'Open Sans', sans-serif; /* Example of using a Google font */
-  color: #333; /* Dark grey text color */
+  font-family: 'Open Sans', sans-serif;
+  color: #ff73c5;
   line-height: 1.6;
 }
 
 /* CSS Variables */
 :root {
-  --main-bg-color: #f8f8f8; /* Light grey background */
-  --accent-color: #0066cc; /* Blue accent color */
+  --main-bg-color: rgb(153,255,255);
+  --accent-color: hsl(117,100%,50%);
 }
 
 /* Using a CSS variable with a fallback */
@@ -17,8 +17,6 @@ body {
   background-color: var(--main-bg-color, white);
 }
 
-/* CSS Selectors */
-/* Class selector */
 .header-highlight {
   color: var(--accent-color);
 }
@@ -28,7 +26,6 @@ body {
   border: 1px solid #ddd; /* Light grey border */
 }
 
-/* Universal selector */
 * {
   box-sizing: border-box; /* Helps to manage box sizes */
 }
@@ -81,11 +78,8 @@ p.header-highlight {
 
 /* New :has() pseudo-class */
 section:has(> ul) {
-  background-color: #eee; /* Highlight sections with unordered lists */
+  background-color: #eee;
 }
-
-/* Nested Selectors */
-/* Nested selectors are used within the preprocessor context and are not included as native CSS is not capable of nesting */
 
 /* Layouts with Flexbox */
 header {
