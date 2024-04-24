@@ -20,4 +20,7 @@
 
 ## What issues are blocking me?
 
-1) No Blockers
+1) Awaiting additional datasets from the data team to finalize the analysis section of the paper.
+2) Experiencing issues with Riverpod state management causing unexpected behavior in the app.
+
+
