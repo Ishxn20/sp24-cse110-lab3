@@ -15,7 +15,7 @@ a {
     --main-bg-color: beige; 
 }
 header {
-    background-color: var(--main-bg-color, white); 
+    background-color: var(--main-bg-color, yellow); 
 }
 
 footer {
