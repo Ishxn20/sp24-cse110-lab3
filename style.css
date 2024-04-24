@@ -1,98 +1,111 @@
-/* This is the main stylesheet for CSE110 Lab 3 */
+/* Global styles */
+:root {
+    /* CSS variables with fallback */
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --background-color: #f8f9fa; /* Light gray */
+}
 
 body {
-    color: rgb(33, 37, 41); 
-    background-color: #42f5ec;
-}
-h1 {
-    color: hsl(210, 50%, 60%); 
-}
-a {
-    color: color(srgb 1 0.5 0);
+    font-family: 'Roboto', sans-serif; /* 3rd party Google Font */
+    color: var(--primary-color);
+    background-color: var(--background-color);
 }
 
-:root {
-    --main-bg-color: beige; 
-}
+/* Header styles */
 header {
-    background-color: var(--main-bg-color, yellow); 
+    background-color: rgba(52, 152, 219, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
 }
 
-footer {
-    background-color: rgba(108, 117, 125, 0.8); 
-}
-
-p {
-    margin: 2rem; 
-    font-size: 16px;
-    line-height: 1.5em;
-}
-
+/* Section and Attendance List */
 section {
-    margin: 20px auto;
-    padding-top: 10px; 
-}
-div {
-    border: 1px solid #dee2e6; 
-    padding: 15px; 
-    margin-bottom: 10px;
-    border-radius: 8px;
+    margin: 10px auto;
+    border: 2px solid var(--secondary-color); /* Short hand border */
+    padding: 20px; /* Short hand padding */
+    width: 80%;
+    max-width: 960px; /* Sizing */
 }
 
-h2 {
-    text-align: center; 
-    text-decoration: underline; 
+ol, ul {
+    padding-left: 20px;
 }
 
-footer form {
-    display: block; 
-}
-span {
-    display: inline-block;
-}
-
-video {
-    width: 100%; 
-    max-width: 640px; 
+/* Link styles */
+a {
+    color: hsl(210, 100%, 50%); /* HSL color */
+    text-decoration: none;
 }
 
-header {
-    position: relative;
-}
-form button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px; 
+a:hover {
+    text-decoration: underline; /* Pseudo-class */
 }
 
-button:hover {
-    background-color: #007bff; 
-}
-button:active {
-    transform: scale(0.98); 
-}
-
+/* Meeting Logs Section with Flexbox */
 main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start; 
-}
-footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
 }
 
+footer {
+    border-top: 3px dotted #333;
+    padding-top: 10px;
+}
+
+/* Form styling */
+fieldset {
+    border: 3px solid color-mix(in srgb, red 90%, blue 10%); /* color-mix example */
+    padding: 10px;
+}
+
+input[type="text"], input[type="date"], select, datalist {
+    width: 60%; /* Sizing */
+    margin-bottom: 10px; /* Long margin syntax */
+}
+
+button {
+    display: block; /* Display property */
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: #fff;
+    border-radius: 5px; /* Border radius */
+}
+
+/* Responsiveness with Media Queries */
 @media (max-width: 768px) {
     body {
-        font-size: 14px;
+        background-color: color-mix(in srgb, white 50%, black 50%);
     }
-    main {
-        flex-direction: column;
+
+    section {
+        width: 90%;
+    }
+
+    header, footer {
+        text-align: center;
     }
 }
 
+/* Advanced pseudo-classes */
+button:hover, button:active {
+    background-color: var(--primary-color, blue); /* Variable with fallback */
+    color: #fff;
+}
+
+/* Positioning */
+audio, video {
+    position: relative; /* Position property */
+    width: 100%; /* Sizing */
+}
+
+/* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif; 
 }
