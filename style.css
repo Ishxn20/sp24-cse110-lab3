@@ -20,13 +20,13 @@ header h1 {
 
 /* Applying attribute selector */
 a[href^="https"] {
-  color: #008000; /* using rgb() color function */
+  color: #008000;
 }
 
 /* Using :has() pseudo-class */
 section:has(h3) {
-  border: solid 1px #000; /* Box Model: longhand border */
-  padding: 8px 16px; /* Box Model: shorthand padding */
+  border: solid 1px #000;
+  padding: 8px 16px;
 }
 
 /* Combining two selectors */
