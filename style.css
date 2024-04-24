@@ -1,200 +1,163 @@
-/* General styles */
+/* This is the main stylesheet for CSE110 Lab 3 */
+
 body {
-  font-family: 'Open Sans', sans-serif; /* CSS Variables & Fallbacks */
-  --main-bg-color: #f2f2f2;
-  background-color: var(--main-bg-color, #ffffff);
-  color: #333;
+    color: rgb(33, 37, 41); 
+    background-color: #F8F9FA;
 }
-
-/* CSS Selectors */
-header h1 span {
-  font-weight: bold;
-  font-size: 1.5em
-  color: #ff4500;
+h1 {
+    color: hsl(210, 50%, 60%); 
 }
-
-header h1 {
-  text-align: center;
-  text-decoration: underline;
-}
-
-/* Applying attribute selector */
-a[href^="https"] {
-  color: #008000;
-}
-
-/* Using :has() pseudo-class */
-section:has(h3) {
-  border: solid 1px #000;
-  padding: 8px 16px;
-}
-
-/* Combining two selectors */
-div.class-name {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Flexbox */
-header {
-  display: flex;
-  justify-content: space-between; /* one of the flexbox related attributes */
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Grid */
-main {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-  main {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Box Model */
-ol, ul {
-  margin: 0; /* Box Model: longhand margin */
-  padding-left: 20px; /* Box Model: shorthand padding */
-}
-
-/* Pseudo-class */
-button:hover {
-  background-color: #ddd; /* lighter grey when hovered */
-}
-
-/* Nested Selectors */
-section {
-  & > div {
-    background-color: #f0f0f0;
-  }
-  h3 {
-    color: #333;
-    margin-bottom: 0.5em;
-  }
-}
-
-h2, h3 {
-  color: hsl(210, 50%, 40%); /* using hsl() function */
-}
-
-footer {
-  background-color: #e9e9e9;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* Element sizing */
-fieldset {
-  max-width: 500px;
-  margin: auto;
-}
-
-/* ID Selector */
-#name {
-  color: #555;
-}
-
-/* Universal Selector */
-* {
-  box-sizing: border-box;
-}
-
-/* Attribute Selector */
-input[type="date"] {
-  border: 1px solid #ccc;
-}
-
-/* Child Combinator */
-section > h3 {
-  color: #333;
-}
-
-/* General Sibling Combinator */
-h1 + hr {
-  margin-top: 5px;
-}
-
-/* Adjacent Sibling Combinator */
-label + input {
-  margin-left: 5px;
-}
-
-/* :has() Pseudo-class */
-section:has(> div) {
-  background-color: #e8e8e8;
-}
-
-/* Text-related properties */
-p {
-  color: #333;
-  text-align: left;
-  text-decoration: none;
-}
-
-/* More `display` property values */
-audio, video {
-  display: block;
-  width: 100%;
-}
-
-img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Explicit height and width for elements */
-button {
-  width: 100px;
-  height: 50px;
-}
-
-/* Position property */
-footer {
-  position: relative;
-}
-
-/* Pseudo-classes */
-button:active {
-  background-color: #ddd;
-}
-
-input:focus {
-  border-color: #4a90e2;
-}
-
-/* Applying a wider gamut color */
-body {
-  color: color(display-p3 0 0.5 0); 
+a {
+    color: color(srgb 1 0.5 0);
 }
 
 :root {
-  --main-text-color: #333;
+    --main-bg-color: beige; 
+}
+header {
+    background-color: var(--main-bg-color, white); 
 }
 
-body {
-  color: var(--main-text-color, black);
+footer {
+    background-color: rgba(108, 117, 125, 0.8); 
 }
 
-main {
-  background-color: var(--main-bg-color);
+p {
+    margin: 2rem; 
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+section {
+    margin: 20px auto;
+    padding-top: 10px; 
+}
+div {
+    border: 1px solid #dee2e6; 
+    padding: 15px; 
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 h2 {
-  font-size: 2rem; /* rem unit */
+    text-align: center; 
+    text-decoration: underline; 
 }
 
-hr {
-  margin-top: 10vh; /* viewport height unit */
+footer form {
+    display: block; 
+}
+span {
+    display: inline-block;
 }
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+video {
+    width: 100%; 
+    max-width: 640px; 
+}
+
+header {
+    position: relative;
+}
+form button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+}
+
+button:hover {
+    background-color: #007bff; 
+}
+button:active {
+    transform: scale(0.98); 
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    main {
+        flex-direction: column;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+.class-example {
+    color: blue;
+}
+
+#id-example {
+    background-color: lightgray;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+}
+
+a:hover {
+    text-decoration: none; 
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+}
+
+section div {
+    padding: 10px;
+}
+
+header > h1 {
+    margin-top: 0;
+}
+
+h1 ~ p {
+    color: darkgreen;
+}
+
+h1 + h2 {
+    margin-top: -5px;
+}
+
+button.class-example {
+    background-color: red;
+    color: white;
+}
+
+p:has(span) {
+    border-left: 5px solid gold; 
+}
+
+/* Nested Selectors */
+@media (max-width: 768px) {
+    nav {
+        ul {
+            display: none;
+        }
+        .menu-icon {
+            display: block;
+        }
+    }
+}
