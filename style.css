@@ -80,7 +80,6 @@ section {
   }
 }
 
-/* More styling... */
 h2, h3 {
   color: hsl(210, 50%, 40%); /* using hsl() function */
 }
@@ -99,6 +98,3 @@ fieldset {
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-/* Note: This is a high-level example and may need adjustments to fit your specific HTML structure and to pass a detailed visual inspection for the exact requirements of your task. */
-/* Remember to check the site's appearance in the browser's DevTools for mobile, tablet, and desktop. */
