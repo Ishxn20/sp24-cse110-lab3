@@ -1,18 +1,15 @@
-/* Global styles */
 :root {
-    /* CSS variables with fallback */
     --primary-color: #3498db; /* Blue */
     --secondary-color: #2ecc71; /* Green */
     --background-color: #f8f9fa; /* Light gray */
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* 3rd party Google Font */
+    font-family: 'Roboto', sans-serif;
     color: var(--primary-color);
     background-color: var(--background-color);
 }
 
-/* Header styles */
 header {
     background-color: rgba(52, 152, 219, 0.5);
     padding: 20px;
@@ -20,30 +17,27 @@ header {
     color: #fff;
 }
 
-/* Section and Attendance List */
 section {
     margin: 10px auto;
-    border: 2px solid var(--secondary-color); /* Short hand border */
-    padding: 20px; /* Short hand padding */
+    border: 2px solid var(--secondary-color);
+    padding: 20px;
     width: 80%;
-    max-width: 960px; /* Sizing */
+    max-width: 960px; 
 }
 
 ol, ul {
     padding-left: 20px;
 }
 
-/* Link styles */
 a {
-    color: hsl(210, 100%, 50%); /* HSL color */
+    color: hsl(210, 100%, 50%);
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Pseudo-class */
+    text-decoration: underline; 
 }
 
-/* Meeting Logs Section with Flexbox */
 main {
     display: flex;
     flex-direction: column;
@@ -56,27 +50,25 @@ footer {
     padding-top: 10px;
 }
 
-/* Form styling */
 fieldset {
-    border: 3px solid color-mix(in srgb, red 90%, blue 10%); /* color-mix example */
+    border: 3px solid color-mix(in srgb, red 90%, blue 10%);
     padding: 10px;
 }
 
 input[type="text"], input[type="date"], select, datalist {
-    width: 60%; /* Sizing */
-    margin-bottom: 10px; /* Long margin syntax */
+    width: 60%;
+    margin-bottom: 10px; 
 }
 
 button {
-    display: block; /* Display property */
+    display: block; 
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #2ecc71;
     color: #fff;
-    border-radius: 5px; /* Border radius */
+    border-radius: 5px;
 }
 
-/* Responsiveness with Media Queries */
 @media (max-width: 768px) {
     body {
         background-color: color-mix(in srgb, white 50%, black 50%);
@@ -91,19 +83,16 @@ button {
     }
 }
 
-/* Advanced pseudo-classes */
 button:hover, button:active {
-    background-color: var(--primary-color, blue); /* Variable with fallback */
+    background-color: var(--primary-color, blue);
     color: #fff;
 }
 
-/* Positioning */
 audio, video {
-    position: relative; /* Position property */
-    width: 100%; /* Sizing */
+    position: relative; 
+    width: 100%;
 }
 
-/* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
